@@ -22,6 +22,7 @@
 # PPO Algorithm
 ![](http://latex.codecogs.com/gif.latex?L_{actor}\left(\theta\right)=\hat{\mathbb{E}}_t&space;\left[\min(r_t(\theta)&space;\widehat{A}_t,&space;clip(r_t(\theta),&space;1&space;-&space;\epsilon&space;,&space;1&space;&plus;&space;\epsilon)\widehat{A}_t)&space;\right&space;]), where ![](http://latex.codecogs.com/gif.latex?r_t(\theta)&space;=&space;\frac{\pi(a_t\mid&space;s_t;&space;\theta&space;)}{\pi(a_t&space;\mid&space;s_t;&space;\theta_{old})})
 ![](https://latex.codecogs.com/gif.latex?\mbox&space;{L_{critic}(\phi_i)&space;=&space;\mathbb{E}[r(s_t,&space;a_t)&space;&plus;&space;r(s_{t&plus;1},&space;a_{t&plus;1})&space;&plus;&space;\cdots&space;&plus;&space;r(s_{t&plus;n},a_{t&plus;n})&space;&plus;&space;\gamma&space;\max_{a_{t&plus;n&plus;1}}&space;Q(s_{t&plus;n&plus;1},&space;a_{t&plus;n&plus;1};&space;\phi_{i-1})-Q(s_t,&space;a_t;&space;\phi_i)]^2})
+
 * __for__ iteration = 1, 2, ... __N__:
   * __for__ actor= 1, 2, ...__N__:
     * Run policy ![sdf](http://latex.codecogs.com/gif.latex?\pi_{\theta&space;old}) for _T_ steps
